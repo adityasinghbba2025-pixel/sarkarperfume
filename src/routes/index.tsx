@@ -104,7 +104,7 @@ function Sanctum() {
                   SANCTUM lets the room go silent first.
                 </span>
               </p>
-              <div className="mt-10 flex flex-wrap gap-px bg-border">
+              <div className="mt-10 flex flex-wrap">
                 <a
                   href="#order"
                   className="wordmark bg-primary px-8 py-4 text-[0.7rem] text-primary-foreground transition-opacity hover:opacity-85"
@@ -113,7 +113,7 @@ function Sanctum() {
                 </a>
                 <a
                   href="#ledger"
-                  className="wordmark bg-background px-8 py-4 text-[0.7rem] transition-colors hover:text-ember"
+                  className="wordmark border border-border px-8 py-4 text-[0.7rem] transition-colors hover:border-ember hover:text-ember"
                 >
                   Read the ledger ↓
                 </a>
