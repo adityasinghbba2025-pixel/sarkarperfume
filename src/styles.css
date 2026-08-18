@@ -115,3 +115,53 @@
   text-transform: uppercase;
   letter-spacing: 0.55em;
 }
+
+@utility grain {
+  position: relative;
+}
+
+@utility grain-overlay {
+  background-image: radial-gradient(
+    oklch(1 0 0 / 0.045) 1px,
+    transparent 1px
+  );
+  background-size: 3px 3px;
+}
+
+@utility outline-type {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--silver);
+}
+
+@utility outline-ember {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ember);
+}
+
+@utility rail-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.6rem;
+}
+
+@utility marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

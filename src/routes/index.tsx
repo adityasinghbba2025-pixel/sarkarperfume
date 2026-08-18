@@ -25,195 +25,270 @@ export const Route = createFileRoute("/")({
   component: Sanctum,
 });
 
-const notes = [
+const ledger = [
   {
-    stage: "Top",
-    title: "Bergamot & Pink Pepper",
-    body: "A cold, bright opening — citrus peel struck against black pepper. Sharp for the first ten minutes, then it bows.",
+    index: "01",
+    clock: "0–10 MIN",
+    stage: "The Strike",
+    notes: "Bergamot · Pink Pepper",
+    body: "Cold citrus peel struck against black pepper. Loud for ten minutes, then it bows out and never returns.",
   },
   {
-    stage: "Heart",
-    title: "Saffron & Incense",
-    body: "Kashmiri saffron threaded through temple smoke. This is where SANCTUM stops being a fragrance and becomes a room.",
+    index: "02",
+    clock: "10 MIN – 3 HR",
+    stage: "The Room",
+    notes: "Kashmiri Saffron · Incense",
+    body: "Saffron threaded through temple smoke. This is where SANCTUM stops being a fragrance and becomes a place.",
   },
   {
-    stage: "Base",
-    title: "Oud, Amber & Cedar",
-    body: "Assam oud over solid amber resin and dry cedarwood. It settles into skin and stays there for twelve hours.",
+    index: "03",
+    clock: "3 – 12 HR",
+    stage: "The Residue",
+    notes: "Assam Oud · Amber · Cedar",
+    body: "Oud over solid amber resin and dry cedarwood. It stops projecting and starts belonging to your skin.",
   },
+];
+
+const marquee = [
+  "EXTRAIT DE PARFUM",
+  "50 ML",
+  "BATCH OF 500",
+  "12-HOUR WEAR",
+  "UNISEX IN SPIRIT",
+  "TWO 7ML FREEBIES",
 ];
 
 function Sanctum() {
   return (
-    <div className="min-h-screen bg-background">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <span className="wordmark text-sm text-foreground">Sarkar</span>
-          <a
-            href="#order"
-            className="wordmark border border-border px-4 py-2 text-[0.65rem] text-foreground transition-colors hover:border-ember hover:text-ember"
-          >
-            Order
-          </a>
-        </div>
-      </header>
+    <div className="grain-overlay min-h-screen bg-background">
+      {/* Fixed editorial rails */}
+      <div className="pointer-events-none fixed inset-y-0 left-0 z-40 hidden w-12 items-center justify-center border-r border-border/50 lg:flex">
+        <span className="rail-text text-muted-foreground">Sarkar Parfums — Chapter V</span>
+      </div>
+      <div className="pointer-events-none fixed inset-y-0 right-0 z-40 hidden w-12 items-center justify-center border-l border-border/50 lg:flex">
+        <span className="rail-text text-ember">Quiet · Amber · Absolute</span>
+      </div>
 
-      {/* HERO */}
-      <section className="relative flex min-h-[100svh] items-end overflow-hidden">
-        <img
-          src={heroImg}
-          alt="SANCTUM extrait de parfum, a matte black flacon resting on dark stone in amber-lit smoke"
-          width={1920}
-          height={1088}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="veil absolute inset-0" />
-        <div className="relative mx-auto w-full max-w-6xl px-5 pb-20 pt-32 text-center">
-          <p className="eyebrow">Sarkar Parfums · Chapter V</p>
-          <h1 className="mt-5 text-6xl leading-[0.9] tracking-tight text-foreground sm:text-8xl md:text-9xl">
-            SANCTUM
-          </h1>
-          <p className="wordmark mt-6 text-[0.7rem] text-ember sm:text-xs">
-            Quiet · Amber · Absolute
-          </p>
-          <p className="mx-auto mt-8 max-w-md text-base text-muted-foreground">
-            Some men announce themselves. SANCTUM lets the room go silent first.
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <div className="lg:mx-12">
+        <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur">
+          <div className="flex items-stretch justify-between">
+            <span className="wordmark border-r border-border/60 px-6 py-4 text-sm">Sarkar</span>
+            <span className="hidden flex-1 items-center px-6 text-xs text-muted-foreground sm:flex">
+              No. 05 / SANCTUM
+            </span>
             <a
               href="#order"
-              className="wordmark w-full max-w-xs bg-primary px-8 py-4 text-[0.7rem] text-primary-foreground transition-opacity hover:opacity-85 sm:w-auto"
+              className="wordmark border-l border-border/60 px-6 py-4 text-[0.65rem] transition-colors hover:bg-accent hover:text-accent-foreground"
             >
-              Claim yours — ₹2,499
-            </a>
-            <a
-              href="#notes"
-              className="wordmark w-full max-w-xs border border-border px-8 py-4 text-[0.7rem] text-foreground transition-colors hover:border-ember hover:text-ember sm:w-auto"
-            >
-              The notes
+              ₹2,499 — Order
             </a>
           </div>
-        </div>
-      </section>
+        </header>
 
-      {/* STORY */}
-      <section className="border-y border-border/60 py-24">
-        <div className="mx-auto max-w-3xl px-5 text-center">
-          <div className="hairline mx-auto mb-10 w-24" />
-          <h2 className="text-3xl leading-snug text-foreground sm:text-4xl">
-            Built for the hour after midnight, when the noise has gone home.
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            SANCTUM was composed as a private space you can wear — saffron and incense held down by
-            Assam oud, poured at extrait concentration so a single spray outlasts the evening.
-            Unisex in spirit. Absolute in command.
-          </p>
-        </div>
-      </section>
+        {/* HERO — asymmetric split */}
+        <section className="grid border-b border-border/60 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="flex flex-col justify-between border-border/60 px-6 py-16 lg:border-r lg:px-12 lg:py-20">
+            <div>
+              <p className="eyebrow">Composed in Kannauj · Bottled 2026</p>
+              <h1 className="mt-8 font-display text-[19vw] leading-[0.78] tracking-tight sm:text-[13vw] lg:text-[8.5vw]">
+                <span className="block">SANC</span>
+                <span className="outline-type block">TUM</span>
+              </h1>
+            </div>
+            <div className="mt-12 max-w-md">
+              <div className="hairline w-full" />
+              <p className="mt-6 text-xl leading-relaxed text-foreground">
+                Some men announce themselves.
+                <br />
+                <span className="text-muted-foreground">
+                  SANCTUM lets the room go silent first.
+                </span>
+              </p>
+              <div className="mt-10 flex flex-wrap">
+                <a
+                  href="#order"
+                  className="wordmark bg-primary px-8 py-4 text-[0.7rem] text-primary-foreground transition-opacity hover:opacity-85"
+                >
+                  Claim yours
+                </a>
+                <a
+                  href="#ledger"
+                  className="wordmark border border-border px-8 py-4 text-[0.7rem] transition-colors hover:border-ember hover:text-ember"
+                >
+                  Read the ledger ↓
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="relative min-h-[62svh] lg:min-h-[88svh]">
+            <img
+              src={heroImg}
+              alt="SANCTUM extrait de parfum, a matte black flacon on dark stone in amber-lit smoke"
+              width={1920}
+              height={1088}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-background/25" />
+            <span className="wordmark absolute bottom-6 right-6 text-[0.6rem] text-silver/70">
+              Fig. 01 — The Flacon
+            </span>
+          </div>
+        </section>
 
-      {/* NOTES */}
-      <section id="notes" className="py-24">
-        <div className="mx-auto max-w-6xl px-5">
-          <p className="eyebrow text-center">The Composition</p>
-          <h2 className="mt-4 text-center text-4xl text-foreground sm:text-5xl">Three Movements</h2>
-          <div className="mt-14 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
-            {notes.map((n) => (
-              <article key={n.stage} className="bg-card p-8">
-                <p className="eyebrow text-ember">{n.stage}</p>
-                <h3 className="mt-4 text-2xl text-card-foreground">{n.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{n.body}</p>
-              </article>
+        {/* MARQUEE BAND */}
+        <div className="flex overflow-hidden border-b border-border/60 bg-secondary py-3">
+          <div className="marquee-track flex shrink-0 gap-10 whitespace-nowrap pr-10">
+            {[...marquee, ...marquee].map((item, i) => (
+              <span key={i} className="wordmark text-[0.65rem] text-muted-foreground">
+                {item} <span className="text-ember">◆</span>
+              </span>
             ))}
           </div>
-          <figure className="mt-10 overflow-hidden border border-border">
+          <div aria-hidden className="marquee-track flex shrink-0 gap-10 whitespace-nowrap pr-10">
+            {[...marquee, ...marquee].map((item, i) => (
+              <span key={i} className="wordmark text-[0.65rem] text-muted-foreground">
+                {item} <span className="text-ember">◆</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* STATEMENT */}
+        <section className="grid border-b border-border/60 md:grid-cols-[0.4fr_0.6fr]">
+          <div className="border-border/60 px-6 py-14 md:border-r md:px-12">
+            <p className="eyebrow">The Brief</p>
+          </div>
+          <div className="px-6 py-14 md:px-12">
+            <h2 className="max-w-2xl text-3xl leading-tight sm:text-4xl">
+              Built for the hour after midnight, when the noise has finally gone home.
+            </h2>
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
+              A private space you can wear. Saffron and incense held down by Assam oud, poured at
+              extrait concentration so a single spray outlasts the evening — and the next morning's
+              shirt still remembers it.
+            </p>
+          </div>
+        </section>
+
+        {/* LEDGER */}
+        <section id="ledger" className="border-b border-border/60">
+          <div className="flex items-baseline justify-between border-b border-border/60 px-6 py-6 md:px-12">
+            <h2 className="text-3xl sm:text-4xl">The Scent Ledger</h2>
+            <span className="eyebrow hidden sm:block">Twelve hours, logged</span>
+          </div>
+          {ledger.map((row) => (
+            <article
+              key={row.index}
+              className="group grid items-start gap-4 border-b border-border/60 px-6 py-10 transition-colors last:border-b-0 hover:bg-secondary/50 md:grid-cols-[auto_1fr_1.2fr] md:gap-10 md:px-12"
+            >
+              <span className="outline-ember font-display text-6xl leading-none md:text-7xl">
+                {row.index}
+              </span>
+              <div>
+                <p className="eyebrow text-ember">{row.clock}</p>
+                <h3 className="mt-3 text-3xl">{row.stage}</h3>
+                <p className="wordmark mt-3 text-[0.62rem] text-muted-foreground">{row.notes}</p>
+              </div>
+              <p className="max-w-md text-base leading-relaxed text-muted-foreground">{row.body}</p>
+            </article>
+          ))}
+          <figure className="border-t border-border/60">
             <img
               src={notesImg}
               alt="Saffron threads, oud wood chips, bergamot peel and amber resin on black slate"
               width={1600}
               height={912}
               loading="lazy"
-              className="h-[240px] w-full object-cover sm:h-[380px]"
+              className="h-[220px] w-full object-cover sm:h-[360px]"
             />
+            <figcaption className="wordmark border-t border-border/60 px-6 py-3 text-[0.6rem] text-muted-foreground md:px-12">
+              Fig. 02 — Raw materials, unblended
+            </figcaption>
           </figure>
-        </div>
-      </section>
+        </section>
 
-      {/* PRODUCT / ORDER */}
-      <section id="order" className="border-t border-border/60 py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 md:grid-cols-2">
-          <div className="border border-border bg-card">
+        {/* ORDER — spec sheet */}
+        <section id="order" className="grid border-b border-border/60 lg:grid-cols-2">
+          <div className="relative border-border/60 lg:border-r">
             <img
               src={bottleImg}
               alt="SANCTUM 50ml matte black flacon with brushed silver plate, Sarkar packaging"
               width={1024}
               height={1280}
               loading="lazy"
-              className="h-full w-full object-cover"
+              className="h-full max-h-[80svh] w-full object-cover"
             />
+            <span className="wordmark absolute bottom-6 left-6 text-[0.6rem] text-silver/70">
+              50 ML · Extrait
+            </span>
           </div>
-          <div>
-            <p className="eyebrow">Extrait de Parfum · 50ml</p>
-            <h2 className="mt-4 text-5xl text-foreground">SANCTUM</h2>
-            <div className="hairline my-8 w-full" />
-            <div className="flex items-end gap-4">
-              <span className="font-display text-4xl text-foreground">₹2,499</span>
+          <div className="flex flex-col justify-center px-6 py-16 lg:px-12">
+            <p className="eyebrow">Acquire</p>
+            <h2 className="mt-4 font-display text-6xl leading-none sm:text-7xl">SANCTUM</h2>
+            <div className="mt-10 flex flex-wrap items-end gap-4 border-y border-border/60 py-6">
+              <span className="font-display text-5xl">₹2,499</span>
               <span className="text-lg text-muted-foreground line-through">₹3,600</span>
               <span className="wordmark bg-accent px-3 py-1 text-[0.6rem] text-accent-foreground">
                 30% off
               </span>
             </div>
-            <ul className="mt-8 space-y-3 text-sm text-muted-foreground">
+            <dl className="mt-2 text-sm">
               {[
-                "Two 7ml freebies with every order",
-                "12-hour wear · heavy projection",
-                "Free shipping across India · COD available",
-                "Bottled in limited batches of 500",
-              ].map((item) => (
-                <li key={item} className="flex gap-3 border-b border-border/60 pb-3">
-                  <span className="text-ember">—</span>
-                  {item}
-                </li>
+                ["Freebies", "Two 7ml travel sprays, every order"],
+                ["Wear", "12 hours · heavy projection"],
+                ["Shipping", "Free across India · COD available"],
+                ["Batch", "Limited to 500 flacons"],
+              ].map(([k, v]) => (
+                <div
+                  key={k}
+                  className="flex justify-between gap-6 border-b border-border/60 py-4 text-muted-foreground"
+                >
+                  <dt className="wordmark text-[0.6rem] text-silver">{k}</dt>
+                  <dd className="text-right">{v}</dd>
+                </div>
               ))}
-            </ul>
+            </dl>
             <a
               href="https://www.sarkar.store/collections/shop-all"
-              className="wordmark mt-10 block bg-primary px-8 py-4 text-center text-[0.7rem] text-primary-foreground transition-opacity hover:opacity-85"
+              className="wordmark mt-10 block bg-primary px-8 py-5 text-center text-[0.7rem] text-primary-foreground transition-opacity hover:opacity-85"
             >
-              Add to bag
+              Add to bag →
             </a>
-            <p className="mt-4 text-center text-xs text-muted-foreground">
-              Ships in 24 hours · 7-day returns
-            </p>
+            <p className="mt-4 text-xs text-muted-foreground">Ships in 24 hours · 7-day returns</p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer className="border-t border-border/60 py-14">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 text-center">
-          <span className="wordmark text-sm text-foreground">Sarkar</span>
-          <p className="text-xs text-muted-foreground">Unisex in spirit. Absolute in command.</p>
-          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+        <footer>
+          <div className="grid gap-px bg-border sm:grid-cols-3">
             {[
               ["Shop all", "https://www.sarkar.store/collections/shop-all"],
               ["Know Sarkar", "https://www.sarkar.store/pages/know-sarkar"],
               ["Throne", "https://www.sarkar.store/products/throne"],
               ["Orion", "https://www.sarkar.store/products/orion"],
+              ["Noble", "https://www.sarkar.store/products/noble"],
+              ["Regal", "https://www.sarkar.store/products/regal"],
             ].map(([label, href]) => (
               <a
                 key={label}
                 href={href}
-                className="eyebrow transition-colors hover:text-ember"
-                style={{ letterSpacing: "0.25em" }}
+                className="wordmark bg-background px-6 py-6 text-[0.62rem] transition-colors hover:bg-secondary hover:text-ember"
               >
                 {label}
               </a>
             ))}
-          </nav>
-          <p className="text-[0.7rem] text-muted-foreground">
-            © 2026 Sarkar Parfums. SANCTUM is a student concept fragrance.
-          </p>
-        </div>
-      </footer>
+          </div>
+          <div className="flex flex-col items-start justify-between gap-4 border-t border-border/60 px-6 py-10 md:flex-row md:items-center md:px-12">
+            <span className="font-display text-4xl">Sarkar</span>
+            <p className="text-xs text-muted-foreground">
+              Unisex in spirit. Absolute in command.
+              <br />
+              <span className="opacity-70">
+                © 2026 Sarkar Parfums. SANCTUM is a student concept fragrance.
+              </span>
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
