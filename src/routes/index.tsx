@@ -123,12 +123,12 @@ function Sanctum() {
           <div className="relative min-h-[62svh] lg:min-h-[88svh]">
             <img
               src={heroImg}
-              alt="SANCTUM extrait de parfum, a matte black flacon on dark stone in amber-lit smoke"
-              width={1920}
-              height={1088}
+              alt="Sarkar chess-king perfume flacons in blue, oxblood, matte black and amber on dark stone"
+              width={1000}
+              height={1000}
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-background/25" />
+            <div className="absolute inset-0 bg-background/10" />
             <span className="wordmark absolute bottom-6 right-6 text-[0.6rem] text-silver/70">
               Fig. 01 — The Flacon
             </span>
