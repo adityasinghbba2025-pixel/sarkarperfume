@@ -209,14 +209,14 @@ function Sanctum() {
 
         {/* ORDER — spec sheet */}
         <section id="order" className="grid border-b border-border/60 lg:grid-cols-2">
-          <div className="relative border-border/60 lg:border-r">
+          <div className="relative flex items-center justify-center border-border/60 bg-silver/10 lg:border-r">
             <img
               src={bottleImg}
-              alt="SANCTUM 50ml matte black flacon with brushed silver plate, Sarkar packaging"
-              width={1024}
-              height={1280}
+              alt="Sarkar matte black chess-king flacon, 50ml, studio shot"
+              width={1000}
+              height={1000}
               loading="lazy"
-              className="h-full max-h-[80svh] w-full object-cover"
+              className="h-full max-h-[80svh] w-full object-contain mix-blend-lighten"
             />
             <span className="wordmark absolute bottom-6 left-6 text-[0.6rem] text-silver/70">
               50 ML · Extrait
