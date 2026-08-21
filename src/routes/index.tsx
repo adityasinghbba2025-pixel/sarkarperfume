@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImg from "@/assets/sanctum-hero.jpg";
-import bottleImg from "@/assets/sanctum-bottle.jpg";
+import heroImg from "@/assets/sarkar-lineup.jpg";
+import bottleImg from "@/assets/sarkar-bottle.jpg";
 import notesImg from "@/assets/sanctum-notes.jpg";
 
 export const Route = createFileRoute("/")({
@@ -123,12 +123,12 @@ function Sanctum() {
           <div className="relative min-h-[62svh] lg:min-h-[88svh]">
             <img
               src={heroImg}
-              alt="SANCTUM extrait de parfum, a matte black flacon on dark stone in amber-lit smoke"
-              width={1920}
-              height={1088}
+              alt="Sarkar chess-king perfume flacons in blue, oxblood, matte black and amber on dark stone"
+              width={1000}
+              height={1000}
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-background/25" />
+            <div className="absolute inset-0 bg-background/10" />
             <span className="wordmark absolute bottom-6 right-6 text-[0.6rem] text-silver/70">
               Fig. 01 — The Flacon
             </span>
@@ -209,12 +209,12 @@ function Sanctum() {
 
         {/* ORDER — spec sheet */}
         <section id="order" className="grid border-b border-border/60 lg:grid-cols-2">
-          <div className="relative border-border/60 lg:border-r">
+          <div className="relative flex items-center justify-center border-border/60 bg-silver lg:border-r">
             <img
               src={bottleImg}
-              alt="SANCTUM 50ml matte black flacon with brushed silver plate, Sarkar packaging"
-              width={1024}
-              height={1280}
+              alt="Sarkar matte black chess-king flacon, 50ml, studio shot"
+              width={1000}
+              height={1000}
               loading="lazy"
               className="h-full max-h-[80svh] w-full object-cover"
             />
