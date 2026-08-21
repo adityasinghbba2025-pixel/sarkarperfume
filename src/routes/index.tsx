@@ -216,7 +216,7 @@ function Sanctum() {
               width={1000}
               height={1000}
               loading="lazy"
-              className="h-full max-h-[80svh] w-full object-contain"
+              className="h-full max-h-[80svh] w-full object-cover"
             />
             <span className="wordmark absolute bottom-6 left-6 text-[0.6rem] text-silver/70">
               50 ML · Extrait
