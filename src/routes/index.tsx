@@ -3,8 +3,57 @@ import heroImg from "@/assets/sarkar-lineup.jpg";
 import bottleImg from "@/assets/sarkar-bottle.jpg";
 import notesImg from "@/assets/sanctum-notes.jpg";
 
+const siteUrl = "https://sarkarperfume.lovable.app";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: "SANCTUM by Sarkar",
+      description: "A student concept fragrance page for SANCTUM by Sarkar.",
+      inLanguage: "en",
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      url: `${siteUrl}/`,
+      name: "SANCTUM by Sarkar — Quiet. Amber. Absolute.",
+      description:
+        "Explore SANCTUM, a student concept for a 50ml extrait de parfum with saffron, incense, oud, amber and cedar.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${siteUrl}/#fragrance` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "Product",
+      "@id": `${siteUrl}/#fragrance`,
+      name: "SANCTUM by Sarkar",
+      description:
+        "SANCTUM is a student concept fragrance, not an independently verified commercial product. A unisex 50ml extrait de parfum concept with bergamot, pink pepper, saffron, incense, oud, amber and cedar notes, presented using original Sarkar packaging imagery.",
+      category: "Extrait de parfum",
+      brand: { "@type": "Brand", name: "Sarkar" },
+      mainEntityOfPage: { "@id": `${siteUrl}/#webpage` },
+      additionalProperty: [
+        { "@type": "PropertyValue", name: "Volume", value: 50, unitText: "ml" },
+        { "@type": "PropertyValue", name: "Top notes", value: "Bergamot, Pink Pepper" },
+        { "@type": "PropertyValue", name: "Heart notes", value: "Kashmiri Saffron, Incense" },
+        { "@type": "PropertyValue", name: "Base notes", value: "Assam Oud, Amber, Cedar" },
+      ],
+    },
+  ],
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [{ rel: "canonical", href: `${siteUrl}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+      },
+    ],
     meta: [
       { title: "SANCTUM by Sarkar — Quiet. Amber. Absolute." },
       {
@@ -19,6 +68,8 @@ export const Route = createFileRoute("/")({
           "Saffron, oud and amber in a matte obsidian flacon. Extrait de parfum, 50ml. Unisex in spirit, absolute in command.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${siteUrl}/` },
+      { property: "og:site_name", content: "SANCTUM by Sarkar" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
