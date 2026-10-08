@@ -328,6 +328,26 @@ function Sanctum() {
               </a>
             ))}
           </div>
+          <nav aria-label="Social links" className="grid border-t border-border/60 sm:grid-cols-2">
+            <a
+              href="https://www.instagram.com/houseofsarkar/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="wordmark flex items-center justify-between gap-4 border-b border-border/60 px-6 py-6 text-[0.62rem] transition-colors hover:bg-secondary hover:text-ember sm:border-b-0 sm:border-r"
+            >
+              <span>Sarkar · Instagram</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCqwUrj10mAEsqezcItqvwEw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="wordmark flex items-center justify-between gap-4 px-6 py-6 text-[0.62rem] transition-colors hover:bg-secondary hover:text-ember"
+            >
+              <span>Bhuvan Bam · YouTube</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
           <div className="flex flex-col items-start justify-between gap-4 border-t border-border/60 px-6 py-10 md:flex-row md:items-center md:px-12">
             <span className="font-display text-4xl">Sarkar</span>
             <p className="text-xs text-muted-foreground">
