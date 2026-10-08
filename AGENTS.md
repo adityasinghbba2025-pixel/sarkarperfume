@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Define structured data in the content route's head as a linked JSON-LD graph; omit unverified offers, ratings and product identifiers because this site presents a student fragrance concept.
