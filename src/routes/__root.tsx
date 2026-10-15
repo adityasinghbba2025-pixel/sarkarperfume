@@ -83,13 +83,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "SANCTUM by Sarkar: saffron, oud and amber extrait de parfum in a matte obsidian flacon.",
+          "SANCTUM is a student fragrance concept inspired by Sarkar, with proposed saffron, oud and amber notes and original Sarkar bottle imagery.",
       },
-      { name: "author", content: "Sarkar Parfums" },
       { property: "og:title", content: "SANCTUM by Sarkar" },
       {
         property: "og:description",
-        content: "Saffron, oud and amber. Extrait de parfum, 50ml.",
+        content: "A student fragrance concept inspired by Sarkar, not an official product listing.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
