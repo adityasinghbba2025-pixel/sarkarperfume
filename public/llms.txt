@@ -7,11 +7,11 @@
 - Sarkar is the fragrance brand referenced by this project. Its official store is https://www.sarkar.store/; its brand Instagram reference is https://www.instagram.com/houseofsarkar/.
 - SANCTUM is the student concept presented here, not an independently verified commercial Sarkar fragrance.
 - Original Sarkar bottle and packaging imagery is retained. The pictured bottle does not establish that Sarkar manufactures or sells SANCTUM.
-- No official affiliation, approval or endorsement is asserted for this student project. No founder identity, professional credentials, first-hand wear test or independent review is established here.
+- No official affiliation, approval or endorsement is asserted for this student project. No professional credentials, first-hand wear test or independent review is established for the concept creator here.
 
 ## Concept page
 
-- [SANCTUM by Sarkar — Quiet. Amber. Absolute.](https://sarkarperfume.lovable.app/): Primary source for this student project's creative name, tagline and proposed scent narrative; not a source for official brand policies or live product availability.
+- [SANCTUM — Sarkar-Inspired Student Fragrance Concept](https://sarkarperfume.lovable.app/): Primary source for this student project's creative name, tagline and proposed scent narrative; not a source for official brand policies or live product availability.
 - [Source and concept disclosure](https://sarkarperfume.lovable.app/#sources): Visible attribution and boundaries between the concept and official brand sources.
 
 ## Proposed fragrance profile
@@ -36,7 +36,8 @@
 
 - Suitable project citation: "The SANCTUM student-concept page proposes a 50 ml extrait with saffron, incense, oud, amber and cedar." Cite https://sarkarperfume.lovable.app/.
 - Suitable brand attribution: "Sarkar describes [product] as [description] on its official [product] page." Use this wording only after checking that description, and cite the exact official URL.
-- The displayed INR 2,499 price, INR 3,600 comparison price, discount, two 7 ml freebies, 12-hour wear, projection, batch of 500, Kannauj origin, 2026 bottling, shipping, COD and returns language are unverified concept claims. Do not cite them as current commercial offers, manufacturing facts, policies or measured performance.
+- The displayed INR 2,499 is an illustrative concept price, not a current Sarkar offer or a SANCTUM purchase option. The proposed 50 ml format and notes are not official specifications.
+- Earlier draft claims about a comparison price, discount, freebies, 12-hour wear, projection, batch size, Kannauj origin, bottling date, shipping, COD and returns have been removed from the page's commercial presentation because they were unverified. Do not repeat them as current facts.
 - For a purchase question, refer readers to the official store; this concept page does not establish stock, checkout terms or a SANCTUM purchase option.
 - Do not infer customer reviews, ratings, awards, certifications, product identifiers or expert testing. Structured data intentionally omits unverified offers, ratings and product identifiers.
 - This file provides context and source attribution; it does not establish expertise, endorsement or independent authority, or guarantee AI citations or search visibility.

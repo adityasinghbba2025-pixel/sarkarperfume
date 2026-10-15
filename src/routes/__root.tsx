@@ -79,17 +79,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SANCTUM by Sarkar — Quiet. Amber. Absolute." },
-      {
-        name: "description",
-        content:
-          "SANCTUM is a student fragrance concept inspired by Sarkar, with proposed saffron, oud and amber notes and original Sarkar bottle imagery.",
-      },
-      { property: "og:title", content: "SANCTUM by Sarkar" },
-      {
-        property: "og:description",
-        content: "A student fragrance concept inspired by Sarkar, not an official product listing.",
-      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
