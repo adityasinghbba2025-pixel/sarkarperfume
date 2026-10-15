@@ -1,6 +1,6 @@
 # Tasks
-- [ ] Improve llms.txt brand identity, source attribution and concept boundaries.
-- [ ] Align visible trust language and page metadata; verify citations and rendered content.
+- [x] Improve llms.txt brand identity, source attribution and concept boundaries.
+- [x] Align visible trust language and page metadata; verify citations and rendered content.
 - [x] Add separately labeled Sarkar Instagram and Bhuvan Bam YouTube footer links.
 - [x] Verify the links and page checks.
 - [x] Deliver a preliminary official-store-based brand audit and distinguish the separate content reference; direct social inspection is unavailable.
