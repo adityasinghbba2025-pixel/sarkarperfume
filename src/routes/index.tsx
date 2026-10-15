@@ -343,10 +343,27 @@ function Sanctum() {
               {" "}For current products, prices and policies, consult the official store.
             </p>
             <p>
+              Sarkar’s <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/collections/shop-all">official collection</a> lists
+              {" "}THRONE, REGAL, NOBLE and ORION. On its{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/know-sarkar">brand page</a>,
+              {" "}Sarkar describes itself as a “premium, unisex fragrance house built on everyday authority.”
+              This is the brand’s own description, not an independent assessment or a claim about SANCTUM.
+            </p>
+            <p>
+              Official purchase support: <a className="text-foreground underline underline-offset-4" href="mailto:support@sarkar.store">Sarkar customer support</a>,{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/shipping-policy">shipping policy</a> and{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/refund-policy">refund policy</a>.
+              {" "}These belong to Sarkar’s store, not this student project.
+            </p>
+            <p>
               The scent notes and geographic descriptors are creative proposals, not verified
               ingredients or sourcing facts. Brand-authored descriptions are attributed to Sarkar,
               not presented as independent testing. Bhuvan Bam’s channel is linked only as a
               separate storytelling reference; it is not an endorsement of this project.
+            </p>
+            <p className="border-t border-border/60 pt-5 text-xs">
+              Source review: <time dateTime="2026-10-15">15 October 2026</time> · Official collection and brand page.
+              {" "}No product testing, verified reviews or professional perfumer credentials are claimed.
             </p>
           </div>
         </section>

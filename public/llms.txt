@@ -9,6 +9,13 @@
 - Original Sarkar bottle and packaging imagery is retained. The pictured bottle does not establish that Sarkar manufactures or sells SANCTUM.
 - No official affiliation, approval or endorsement is asserted for this student project. No professional credentials, first-hand wear test or independent review is established for the concept creator here.
 
+## Official-source brand context
+
+- Source review: 15 October 2026, covering the official collection and Know Sarkar page. This is a source review, not a hands-on product test; store information can change.
+- The [official collection](https://www.sarkar.store/collections/shop-all) lists THRONE, REGAL, NOBLE and ORION. These are official product references, distinct from the SANCTUM student concept.
+- On [Know Sarkar](https://www.sarkar.store/pages/know-sarkar), Sarkar describes itself as a "premium, unisex fragrance house built on everyday authority." Attribute this positioning to the brand; it is not an independent quality assessment.
+- The supplied collection URL contained an srsltid tracking parameter. Citations use the clean official collection URL, not the tracked link; this project's canonical URL remains https://sarkarperfume.lovable.app/.
+
 ## Concept page
 
 - [SANCTUM — Sarkar-Inspired Student Fragrance Concept](https://sarkarperfume.lovable.app/): Primary source for this student project's creative name, tagline and proposed scent narrative; not a source for official brand policies or live product availability.
@@ -31,6 +38,9 @@
 - [Sarkar fragrance collection](https://www.sarkar.store/collections/shop-all): Official catalogue and purchase destination; check it for current listings, prices and availability.
 - [Sarkar THRONE](https://www.sarkar.store/products/throne): Original product reference used for bottle imagery; THRONE and SANCTUM must not be treated as the same product.
 - [Sarkar Instagram](https://www.instagram.com/houseofsarkar/?hl=en): Brand social reference. No specific post, follower count or social proof is substantiated by this page.
+- [Official shipping policy](https://www.sarkar.store/pages/shipping-policy): Sarkar store policy; check current terms before purchasing and do not apply them to SANCTUM.
+- [Official refund policy](https://www.sarkar.store/pages/refund-policy): Sarkar store policy; not a returns promise from this student project.
+- [Sarkar customer support](mailto:support@sarkar.store): Official store support, not contact details for this project's creator.
 
 ## Citation language and claim boundaries
 
