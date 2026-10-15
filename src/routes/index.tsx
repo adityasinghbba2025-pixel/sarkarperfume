@@ -24,6 +24,11 @@ const structuredData = {
         "Explore SANCTUM, a student concept for a 50ml extrait de parfum with saffron, incense, oud, amber and cedar.",
       isPartOf: { "@id": `${siteUrl}/#website` },
       mainEntity: { "@id": `${siteUrl}/#fragrance` },
+       citation: [
+         "https://www.sarkar.store/",
+         "https://www.sarkar.store/pages/know-sarkar",
+         "https://www.sarkar.store/products/throne",
+       ],
       inLanguage: "en",
     },
     {
@@ -33,7 +38,7 @@ const structuredData = {
       description:
         "SANCTUM is a student concept fragrance, not an independently verified commercial product. A unisex 50ml extrait de parfum concept with bergamot, pink pepper, saffron, incense, oud, amber and cedar notes, presented using original Sarkar packaging imagery.",
       category: "Extrait de parfum",
-      brand: { "@type": "Brand", name: "Sarkar" },
+       brand: { "@id": `${siteUrl}/#sarkar-brand` },
       mainEntityOfPage: { "@id": `${siteUrl}/#webpage` },
       additionalProperty: [
         { "@type": "PropertyValue", name: "Volume", value: 50, unitText: "ml" },
@@ -42,6 +47,13 @@ const structuredData = {
         { "@type": "PropertyValue", name: "Base notes", value: "Assam Oud, Amber, Cedar" },
       ],
     },
+     {
+       "@type": "Brand",
+       "@id": `${siteUrl}/#sarkar-brand`,
+       name: "Sarkar",
+       url: "https://www.sarkar.store/",
+       sameAs: ["https://www.instagram.com/houseofsarkar/"],
+     },
   ],
 };
 
@@ -59,13 +71,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "SANCTUM is Sarkar's extrait de parfum of saffron, oud and amber. 50ml, 12-hour wear, unisex in spirit. Two 7ml freebies with every order.",
+          "Explore SANCTUM, a student fragrance concept inspired by Sarkar: proposed saffron, oud and amber notes, original bottle imagery and official brand sources.",
       },
       { property: "og:title", content: "SANCTUM by Sarkar — Quiet. Amber. Absolute." },
       {
         property: "og:description",
         content:
-          "Saffron, oud and amber in a matte obsidian flacon. Extrait de parfum, 50ml. Unisex in spirit, absolute in command.",
+          "SANCTUM is a student fragrance concept inspired by Sarkar, with proposed saffron, oud and amber notes and original Sarkar bottle imagery. Not an official product listing.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${siteUrl}/` },
@@ -263,7 +275,7 @@ function Sanctum() {
           <div className="relative flex items-center justify-center border-border/60 bg-silver lg:border-r">
             <img
               src={bottleImg}
-              alt="Sarkar matte black chess-king flacon, 50ml, studio shot"
+              alt="Original Sarkar THRONE chess-king perfume bottle used to illustrate the SANCTUM student concept"
               width={1000}
               height={1000}
               loading="lazy"
@@ -306,6 +318,37 @@ function Sanctum() {
               Add to bag →
             </a>
             <p className="mt-4 text-xs text-muted-foreground">Ships in 24 hours · 7-day returns</p>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Student concept, not an official product listing. The price, discount, freebies,
+              wear time, batch size and delivery terms above are proposed, not verified offers.
+              The purchase link opens Sarkar’s official collection, not a SANCTUM checkout.
+            </p>
+          </div>
+        </section>
+
+        <section id="sources" className="grid border-b border-border/60 md:grid-cols-[0.4fr_0.6fr]">
+          <div className="border-border/60 px-6 py-14 md:border-r md:px-12">
+            <p className="eyebrow">Source & attribution</p>
+            <h2 className="mt-4 text-3xl">A concept, not a claim.</h2>
+          </div>
+          <div className="space-y-5 px-6 py-14 text-sm leading-relaxed text-muted-foreground md:px-12">
+            <p>
+              SANCTUM is a student fragrance concept inspired by Sarkar. Its name, scent narrative
+              and proposed specifications are creative work, not a verified Sarkar release.
+              Original Sarkar packaging imagery is preserved; no official approval or endorsement
+              is asserted. No first-hand wear test or independent review is presented.
+            </p>
+            <p>
+              Brand references: <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/">Sarkar’s official store</a>,{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/know-sarkar">Know Sarkar</a> and{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/products/throne">THRONE’s original product page</a>.
+              {" "}For current products, prices and policies, consult the official store.
+            </p>
+            <p>
+              The scent notes, geographic descriptors, Kannauj origin and bottling date are
+              concept copy, not verified ingredients, provenance or manufacturing facts.
+              Bhuvan Bam’s channel is a separate storytelling reference, not a Sarkar affiliation.
+            </p>
           </div>
         </section>
 
