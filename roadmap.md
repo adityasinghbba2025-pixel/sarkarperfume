@@ -1,4 +1,6 @@
 # Tasks
+- [ ] Use the supplied official Sarkar collection to improve cited brand context.
+- [ ] Strengthen visible concept labeling and remove misleading commercial/test language; verify page and llms.txt.
 - [x] Improve llms.txt brand identity, source attribution and concept boundaries.
 - [x] Align visible trust language and page metadata; verify citations and rendered content.
 - [x] Add separately labeled Sarkar Instagram and Bhuvan Bam YouTube footer links.

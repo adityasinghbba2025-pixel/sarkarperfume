@@ -11,21 +11,22 @@ const structuredData = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: `${siteUrl}/`,
-      name: "SANCTUM by Sarkar",
-      description: "A student concept fragrance page for SANCTUM by Sarkar.",
+      name: "SANCTUM — Sarkar-inspired student concept",
+      description: "An independent student fragrance concept inspired by Sarkar, not the official brand store.",
       inLanguage: "en",
     },
     {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
       url: `${siteUrl}/`,
-      name: "SANCTUM by Sarkar — Quiet. Amber. Absolute.",
+      name: "SANCTUM — Sarkar-Inspired Student Fragrance Concept",
       description:
         "Explore SANCTUM, a student concept for a 50ml extrait de parfum with saffron, incense, oud, amber and cedar.",
       isPartOf: { "@id": `${siteUrl}/#website` },
       mainEntity: { "@id": `${siteUrl}/#fragrance` },
        citation: [
          "https://www.sarkar.store/",
+         "https://www.sarkar.store/collections/shop-all",
          "https://www.sarkar.store/pages/know-sarkar",
          "https://www.sarkar.store/products/throne",
        ],
@@ -41,10 +42,10 @@ const structuredData = {
        brand: { "@id": `${siteUrl}/#sarkar-brand` },
       mainEntityOfPage: { "@id": `${siteUrl}/#webpage` },
       additionalProperty: [
-        { "@type": "PropertyValue", name: "Volume", value: 50, unitText: "ml" },
-        { "@type": "PropertyValue", name: "Top notes", value: "Bergamot, Pink Pepper" },
-        { "@type": "PropertyValue", name: "Heart notes", value: "Kashmiri Saffron, Incense" },
-        { "@type": "PropertyValue", name: "Base notes", value: "Assam Oud, Amber, Cedar" },
+        { "@type": "PropertyValue", name: "Proposed volume", value: 50, unitText: "ml" },
+        { "@type": "PropertyValue", name: "Proposed top notes", value: "Bergamot, Pink Pepper" },
+        { "@type": "PropertyValue", name: "Proposed heart notes", value: "Kashmiri Saffron, Incense" },
+        { "@type": "PropertyValue", name: "Proposed base notes", value: "Assam Oud, Amber, Cedar" },
       ],
     },
      {
@@ -67,13 +68,13 @@ export const Route = createFileRoute("/")({
       },
     ],
     meta: [
-      { title: "SANCTUM by Sarkar — Quiet. Amber. Absolute." },
+      { title: "SANCTUM — Sarkar-Inspired Student Fragrance Concept" },
       {
         name: "description",
         content:
           "Explore SANCTUM, a student fragrance concept inspired by Sarkar: proposed saffron, oud and amber notes, original bottle imagery and official brand sources.",
       },
-      { property: "og:title", content: "SANCTUM by Sarkar — Quiet. Amber. Absolute." },
+      { property: "og:title", content: "SANCTUM — Sarkar-Inspired Student Fragrance Concept" },
       {
         property: "og:description",
         content:
@@ -81,7 +82,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${siteUrl}/` },
-      { property: "og:site_name", content: "SANCTUM by Sarkar" },
+      { property: "og:site_name", content: "SANCTUM Student Concept" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
@@ -91,34 +92,34 @@ export const Route = createFileRoute("/")({
 const ledger = [
   {
     index: "01",
-    clock: "0–10 MIN",
+    clock: "PROPOSED OPENING",
     stage: "The Strike",
     notes: "Bergamot · Pink Pepper",
-    body: "Cold citrus peel struck against black pepper. Loud for ten minutes, then it bows out and never returns.",
+    body: "The imagined opening pairs bright citrus peel with the sharp character of pink pepper.",
   },
   {
     index: "02",
-    clock: "10 MIN – 3 HR",
+    clock: "PROPOSED HEART",
     stage: "The Room",
     notes: "Kashmiri Saffron · Incense",
     body: "Saffron threaded through temple smoke. This is where SANCTUM stops being a fragrance and becomes a place.",
   },
   {
     index: "03",
-    clock: "3 – 12 HR",
+    clock: "PROPOSED DRY-DOWN",
     stage: "The Residue",
     notes: "Assam Oud · Amber · Cedar",
-    body: "Oud over solid amber resin and dry cedarwood. It stops projecting and starts belonging to your skin.",
+    body: "The proposed base layers oud, amber and dry cedarwood into a quiet, woody finish.",
   },
 ];
 
 const marquee = [
-  "EXTRAIT DE PARFUM",
-  "50 ML",
-  "BATCH OF 500",
-  "12-HOUR WEAR",
+  "STUDENT CONCEPT",
+  "PROPOSED 50 ML EXTRAIT",
+  "SAFFRON · INCENSE",
+  "OUD · AMBER · CEDAR",
   "UNISEX IN SPIRIT",
-  "TWO 7ML FREEBIES",
+  "ORIGINAL SARKAR IMAGERY",
 ];
 
 function Sanctum() {
@@ -126,7 +127,7 @@ function Sanctum() {
     <div className="grain-overlay min-h-screen bg-background">
       {/* Fixed editorial rails */}
       <div className="pointer-events-none fixed inset-y-0 left-0 z-40 hidden w-12 items-center justify-center border-r border-border/50 lg:flex">
-        <span className="rail-text text-muted-foreground">Sarkar Parfums — Chapter V</span>
+        <span className="rail-text text-muted-foreground">Sarkar-inspired — Student concept</span>
       </div>
       <div className="pointer-events-none fixed inset-y-0 right-0 z-40 hidden w-12 items-center justify-center border-l border-border/50 lg:flex">
         <span className="rail-text text-ember">Quiet · Amber · Absolute</span>
@@ -143,7 +144,7 @@ function Sanctum() {
               href="#order"
               className="wordmark border-l border-border/60 px-6 py-4 text-[0.65rem] transition-colors hover:bg-accent hover:text-accent-foreground"
             >
-              ₹2,499 — Order
+              View concept
             </a>
           </div>
         </header>
@@ -152,7 +153,7 @@ function Sanctum() {
         <section className="grid border-b border-border/60 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-between border-border/60 px-6 py-16 lg:border-r lg:px-12 lg:py-20">
             <div>
-              <p className="eyebrow">Composed in Kannauj · Bottled 2026</p>
+              <p className="eyebrow">Sarkar-inspired · Independent student concept</p>
               <h1 className="mt-8 font-display text-[19vw] leading-[0.78] tracking-tight sm:text-[13vw] lg:text-[8.5vw]">
                 <span className="block">SANC</span>
                 <span className="outline-type block">TUM</span>
@@ -172,7 +173,7 @@ function Sanctum() {
                   href="#order"
                   className="wordmark bg-primary px-8 py-4 text-[0.7rem] text-primary-foreground transition-opacity hover:opacity-85"
                 >
-                  Claim yours
+                  Explore concept
                 </a>
                 <a
                   href="#ledger"
@@ -226,9 +227,9 @@ function Sanctum() {
               Built for the hour after midnight, when the noise has finally gone home.
             </h2>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
-              A private space you can wear. Saffron and incense held down by Assam oud, poured at
-              extrait concentration so a single spray outlasts the evening — and the next morning's
-              shirt still remembers it.
+              An imagined private space you could wear. This student composition proposes saffron
+              and incense over oud, amber and cedar, envisioned as an extrait de parfum.
+              It is a creative brief, not a tested formula or a wear-time promise.
             </p>
           </div>
         </section>
@@ -237,7 +238,7 @@ function Sanctum() {
         <section id="ledger" className="border-b border-border/60">
           <div className="flex items-baseline justify-between border-b border-border/60 px-6 py-6 md:px-12">
             <h2 className="text-3xl sm:text-4xl">The Scent Ledger</h2>
-            <span className="eyebrow hidden sm:block">Twelve hours, logged</span>
+            <span className="eyebrow hidden sm:block">An imagined composition</span>
           </div>
           {ledger.map((row) => (
             <article
@@ -265,7 +266,7 @@ function Sanctum() {
               className="h-[220px] w-full object-cover sm:h-[360px]"
             />
             <figcaption className="wordmark border-t border-border/60 px-6 py-3 text-[0.6rem] text-muted-foreground md:px-12">
-              Fig. 02 — Raw materials, unblended
+              Fig. 02 — Concept note illustration, not ingredient verification
             </figcaption>
           </figure>
         </section>
@@ -282,25 +283,22 @@ function Sanctum() {
               className="h-full max-h-[80svh] w-full object-cover"
             />
             <span className="wordmark absolute bottom-6 left-6 text-[0.6rem] text-silver/70">
-              50 ML · Extrait
+              Original Sarkar THRONE bottle · Reference image
             </span>
           </div>
           <div className="flex flex-col justify-center px-6 py-16 lg:px-12">
-            <p className="eyebrow">Acquire</p>
+            <p className="eyebrow">Student concept · Proposed specifications</p>
             <h2 className="mt-4 font-display text-6xl leading-none sm:text-7xl">SANCTUM</h2>
             <div className="mt-10 flex flex-wrap items-end gap-4 border-y border-border/60 py-6">
               <span className="font-display text-5xl">₹2,499</span>
-              <span className="text-lg text-muted-foreground line-through">₹3,600</span>
-              <span className="wordmark bg-accent px-3 py-1 text-[0.6rem] text-accent-foreground">
-                30% off
-              </span>
+              <span className="text-sm text-muted-foreground">Illustrative concept price · Not a live offer</span>
             </div>
             <dl className="mt-2 text-sm">
               {[
-                ["Freebies", "Two 7ml travel sprays, every order"],
-                ["Wear", "12 hours · heavy projection"],
-                ["Shipping", "Free across India · COD available"],
-                ["Batch", "Limited to 500 flacons"],
+                ["Format", "Proposed 50 ml extrait de parfum"],
+                ["Profile", "Saffron · Incense · Oud · Amber · Cedar"],
+                ["Testing", "No wear test or performance verification"],
+                ["Availability", "Student concept · Not offered for sale here"],
               ].map(([k, v]) => (
                 <div
                   key={k}
@@ -315,13 +313,12 @@ function Sanctum() {
               href="https://www.sarkar.store/collections/shop-all"
               className="wordmark mt-10 block bg-primary px-8 py-5 text-center text-[0.7rem] text-primary-foreground transition-opacity hover:opacity-85"
             >
-              Add to bag →
+              Visit Sarkar’s official collection ↗
             </a>
-            <p className="mt-4 text-xs text-muted-foreground">Ships in 24 hours · 7-day returns</p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Student concept, not an official product listing. The price, discount, freebies,
-              wear time, batch size and delivery terms above are proposed, not verified offers.
-              The purchase link opens Sarkar’s official collection, not a SANCTUM checkout.
+              The pictured bottle is Sarkar’s original THRONE packaging, not a manufactured
+              SANCTUM product. The link opens Sarkar’s collection, not a SANCTUM checkout.
+              Check the official store for current prices, stock, delivery and returns before buying.
             </p>
           </div>
         </section>
@@ -340,14 +337,33 @@ function Sanctum() {
             </p>
             <p>
               Brand references: <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/">Sarkar’s official store</a>,{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/collections/shop-all">official fragrance collection</a>,{" "}
               <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/know-sarkar">Know Sarkar</a> and{" "}
               <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/products/throne">THRONE’s original product page</a>.
               {" "}For current products, prices and policies, consult the official store.
             </p>
             <p>
-              The scent notes, geographic descriptors, Kannauj origin and bottling date are
-              concept copy, not verified ingredients, provenance or manufacturing facts.
-              Bhuvan Bam’s channel is a separate storytelling reference, not a Sarkar affiliation.
+              Sarkar’s <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/collections/shop-all">official collection</a> lists
+              {" "}THRONE, REGAL, NOBLE and ORION. On its{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/know-sarkar">brand page</a>,
+              {" "}Sarkar describes itself as a “premium, unisex fragrance house built on everyday authority.”
+              This is the brand’s own description, not an independent assessment or a claim about SANCTUM.
+            </p>
+            <p>
+              Official purchase support: <a className="text-foreground underline underline-offset-4" href="mailto:support@sarkar.store">Sarkar customer support</a>,{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/shipping-policy">shipping policy</a> and{" "}
+              <a className="text-foreground underline underline-offset-4" href="https://www.sarkar.store/pages/refund-policy">refund policy</a>.
+              {" "}These belong to Sarkar’s store, not this student project.
+            </p>
+            <p>
+              The scent notes and geographic descriptors are creative proposals, not verified
+              ingredients or sourcing facts. Brand-authored descriptions are attributed to Sarkar,
+              not presented as independent testing. Bhuvan Bam’s channel is linked only as a
+              separate storytelling reference; it is not an endorsement of this project.
+            </p>
+            <p className="border-t border-border/60 pt-5 text-xs">
+              Source review: <time dateTime="2026-10-15">15 October 2026</time> · Official collection and brand page.
+              {" "}No product testing, verified reviews or professional perfumer credentials are claimed.
             </p>
           </div>
         </section>
@@ -397,7 +413,7 @@ function Sanctum() {
               Unisex in spirit. Absolute in command.
               <br />
               <span className="opacity-70">
-                © 2026 Sarkar Parfums. SANCTUM is a student concept fragrance.
+                SANCTUM · Independent student concept, not Sarkar’s official website.
               </span>
             </p>
           </div>
